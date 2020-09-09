@@ -1,0 +1,264 @@
+  .mt-10{
+    margin-top: -10em;
+  }
+  .m0-a{
+    margin: 0 auto !important;
+  }
+  .mt5{
+    margin-top: 5em !important;
+  }
+  .mb5{
+    margin-bottom: 5em !important;
+  }
+
+
+.container{
+  .banner{
+    width: 100%;
+    height: 496px;
+    background-image: url(https://bit.ly/2OhbMHr);
+    background-position: center;
+    background-size: cover;
+  }
+  /* card */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 2;
+  }
+
+.card .item {
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+.item .heart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+.item .heart .far{
+    width: 30px;
+    height: 30px;
+    color: #3F5D45;
+  }
+.item .heart a{
+    background-color:transparent;
+    z-index: 10;
+  }
+.item .heart a:hover{
+    background-color:transparent;
+    color:red;
+
+  }
+
+.item .product{
+    display: block;
+  }
+
+
+.item .tip{
+    position: absolute;
+    background-color: #3F5D45;
+    writing-mode: vertical-lr;
+    left: 30px;
+    color: seashell;
+
+  }
+.item .tip p{
+    margin:5px;
+    letter-spacing: 10px;
+  }
+
+.item .text {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #EAF0ED;
+  }
+
+.item .text p {
+    color: #3F5D45;
+    width: 100%;
+    font-size: 20px;
+    padding:20px 0;
+    text-align: center;
+    flex: 1;
+  }
+
+.item .text p:first-child {
+    font-weight: lighter;
+    border-right: 1px solid #EAF0ED;
+    flex: 2;
+  }
+
+.item button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px 0px;
+    border: none;
+    color: #3F5D45;
+    background-color: #EAF0ED;
+    font-size: 24px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+.item button:focus{
+    outline: none;
+  }
+
+.item button:hover{
+    background: #3F5D45;
+    color:#EAF0ED
+  }
+@media screen and (max-width:768px) {
+    .card{
+        flex-direction: column;
+    }
+    .card .item{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .item img{
+        width: 100%;
+    } 
+  }
+}
+
+.topic{
+  margin: 0 auto;
+  max-width: 83%;
+  margin-top:-88px;
+  @media screen and (max-width:767px){
+      max-width: 100%;
+      margin: 0 auto;
+  }
+  ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  li{
+    width: 100%;
+  }
+  a{
+    display: block;
+    width: 100%;
+    height: 256px;
+    overflow: hidden;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+      .bgi{
+        filter: blur(0);
+      }
+    }
+  }
+  .bgi{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+  }
+  .bgc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+  }
+  .text{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    width: 100%;
+    font-size: 24px;
+    letter-spacing: 10px;
+    z-index: 99;
+  }
+}
+
+.story{
+  section{
+    background: #EAF0ED;
+    margin-top: 100px;
+  }
+  .container{
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width:768px){
+      flex-direction: column;
+    }
+  }
+  .paraphoto{
+    background-image: url("https://bit.ly/2xPn7Eq");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 400px;
+    margin: -20px 0;
+  }
+  @media screen and (max-width:768px){
+    .paraphoto{
+      width: 100%;
+      height: 250px;
+      margin: 0 auto;
+    }
+  }
+  .paragraph{
+    writing-mode: vertical-rl;
+    line-height: 2.5;
+    height: 19em;
+    margin: 10px 0;
+    color: #8DA291;
+    @media screen and (max-width:768px){
+      writing-mode:horizontal-tb;
+      margin: 0 auto;
+      height:auto;
+      order: 2;
+    }
+    p{
+      margin-left: 20px;
+      @media screen and (max-width:768px){
+        margin:0 20px;
+      }
+    }
+  }
+  
+  .slog{
+    width: 89px;
+    height: 307px;
+  }
+  @media screen and (max-width:768px){
+    .slog{
+      display: none;
+    }
+  }
+  .mobilestyle{
+    display: none;
+    max-width: 50%;
+    margin: 0 auto;
+    // margin-top: 100px;
+  }
+  @media screen and (max-width:768px) {
+  .mobilestyle{
+    display: block;
+    }
+  
+  }
+}

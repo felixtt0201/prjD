@@ -1,0 +1,159 @@
+
+.ds-none{
+    display: none;
+}
+
+
+
+
+
+/* login */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 87%;
+    margin: 0 auto;
+}
+@media screen and (max-width:768px) {
+    .contact-social{
+        display: none;
+    }
+}
+
+.login{
+    width: 50%;
+    background-color: #3F5D45;
+}
+@media screen and (max-width:768px) {
+    main{
+        width: 100%;
+        margin-bottom: -40px;
+    }
+    .login{
+        width: 100%;
+    }
+
+}
+
+.login h2{
+    color: #fff;
+    font-size: 36px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.messagebox{
+    display: flex;
+    position: relative;
+    padding-bottom: 10px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.txtbox .messagebox input
+{
+    background-color: #EAF0ED;
+    border: none;
+    font-size: 18px;
+    height: 60px;
+    padding: 0 60px;
+    width: 100%;
+}
+.txtbox .messagebox input:focus{
+    outline: none;
+}
+
+.txtbox .fas{
+    position: absolute;
+    color: #3F5D45;
+    left: 30px;
+}
+
+.login label{
+    color: #fff;
+}
+
+.login a{
+    display:block;
+    background-color: #FFE180;
+    text-decoration: none;
+    color: #3F5D45;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.chkbox{
+    margin: 16px;
+}
+
+.login a:hover{
+    background: #ffd54d;
+}
+
+.login .rwdtitle{
+    background-color: #EAF0ED;
+}
+.login .rwdtitle li a{
+    background: #fff;
+}
+@media screen and (max-width:768px) {
+    .rwdtitle{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .rwdtitle li{
+        width: 30%;
+    }
+
+    .rwdtitle a{
+        margin-bottom: 20px;
+    }
+    .rwdtitle li a:hover{
+        background: #e6e6e6;
+    }
+
+    .rwdtitle img{
+        height: 25px;
+    }
+}
+
+
+/* contact-social */
+.contact-social{
+    background-color: #EAF0ED;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 50%;
+}
+.contact-social h2{
+    margin: 40px 0;
+    font-size: 24px;
+    color: #8DA291;
+    padding: 0 70px;
+}
+.contact-social li{
+    background-color: #fff;
+    margin: 30px;
+}
+
+.contact-social li:hover{
+    background-color: #e6e6e6;
+}
+.contact-social li a{
+    text-decoration: none;
+    color: #8DA291;
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+}
+.contact-social img{
+    height: 20px;
+}
+
+

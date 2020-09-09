@@ -1,0 +1,322 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+
+
+
+
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    align-items: center;
+}
+@media screen and (max-width:768px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+}
+
+.header-logo a{
+    display: block;
+    width: 210px;
+    height: 40px;
+    /* background-image: url(icon/logo-all-dark.svg); */
+    background-image: url(../icon/logo-all-dark.svg);
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:768px){
+    .header-logo a{
+        background-image: url(../icon/logotype-sm-dark.svg);
+        width: 110px;
+        margin-top: 20px;
+    }
+}
+.header-logo .hide-text{
+    color: transparent;
+}
+
+header .select {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header a{
+    display: block;
+    text-decoration: none;
+    color: #3F5D45;
+    padding: 20px 30px;
+}
+.header-check,
+.cart-icon{
+    padding:20px 37px ;
+}
+.header-check:hover,
+header .menu-icon:hover,
+header .cart-icon:hover,
+header .select li:hover{
+    color: #fff;
+    background-color: #3F5D45;
+    transition: .3s;
+}
+
+
+#bar{
+    opacity: 0;
+    position: absolute;
+}
+.header-check{
+    display: none;
+}
+#bar:checked ~ .select {
+    left: 0;
+}
+@media screen and (max-width:768px) {
+    .header-check {
+        display: block;
+    }
+    .select {
+        flex-direction: column;
+        position: absolute;
+        top: 54px;
+        left: -1000px;
+        transition: all 1s;
+        background-color:#EAF0ED;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+    }
+    header .select li{
+        width: 100%;
+    }
+}
+
+
+/* contact */
+.contact{
+    display: block;
+    background:#3F5D45 ;
+    margin-top: 40px;
+}
+@media screen and (max-width:768px){
+    .contact-message{
+        flex-direction: column;
+        align-items:flex-start;
+        width: 100%;
+    }
+    .contact-title{
+        padding-top: 30px;
+        padding-bottom: 10px;
+        padding-left:20px;
+    }
+    .contact-send{
+        padding-left: 20px;
+        padding-right: 40px;
+        width: 100%;
+        align-items: initial;
+    }
+    .contact-send .send input{
+        font-size: 18px;
+    }
+    .contact-send .send button{
+        padding: 16px 20px;
+    }
+    .contact-send .txtbox{
+        width: 100%;
+    }
+}
+.contact-message{
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: 0 auto;
+}
+.contact-title{
+    display: flex;
+    align-items: center;
+}
+.contact-title-logo{
+    width: 40px;
+    height: 40px;
+}
+.contact-text{
+    font-size: 24px;
+    color: #fff;
+    padding: 0 0 0 20px;
+}
+
+
+.send{
+    display: flex;
+    position: relative;
+    /* align-items: center; */
+    padding: 30px 0;
+}
+
+
+.send input,
+.send button{
+    border: none; 
+}
+.send input:focus,
+.send button:focus{
+    outline: none; 
+}
+
+.send input{
+    padding: 16px 50px;
+    font-size: 20px;
+}
+
+.send button{
+    display: block;
+    background: #FFE180;
+    padding: 14px 20px;
+}
+
+.send .fas{
+    position: absolute;
+    color:#3F5D45;
+    font-size: 20px;
+    left: 10px;
+    top:47px;
+}
+
+/* footer */
+.footer{
+    background: #EAF0ED;
+    padding: 20px 0;
+}
+@media screen and (max-width:768px){
+    .copyright{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+
+    .footer-message{
+        margin-left: 20px;
+    }
+
+    .footer-slogan{
+        display: none;
+    }
+}
+
+.footer-wrap{
+    max-width: 940px;
+    margin: 0 auto;
+}
+.footer-message{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-logo{
+    margin:20px 20px 0 0;
+}
+.footer-contact{
+    margin-top: 100px;
+    line-height: 30px;
+}
+
+.footer-contact a{
+    text-decoration: none;
+    color:#3F5D45;
+}
+
+.footer-slogan{
+    text-align: left;
+    writing-mode: vertical-rl;
+    margin-top: 20px;
+    font-size: 23px;
+    line-height: 30px;
+}
+.footer-slogan :last-child{
+    text-indent:20px;
+}
+
+
+.copyright{
+    display: flex;
+    justify-content:space-between;
+}
+
+.copyright-icon{
+    display: flex;
+    justify-content:space-between;    
+}
+.copyright-icon li{
+    width: 32px;
+    padding-right: 10px;
+}

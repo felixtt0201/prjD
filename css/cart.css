@@ -1,0 +1,233 @@
+
+/* main */
+main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+span{
+  display: block;
+}
+@media screen and (max-width:768px) {
+  main{
+    width: 100%;
+    flex-direction: column;
+    margin:-20px;
+  }
+  .mycart{
+    width: 100%;
+  }
+  .mycart li{
+    flex-direction: column;
+    margin: 0 10px;
+    border-bottom: none !important;
+  }
+
+  .mycart .itemdetail .wrap{
+    flex-direction: column;
+    align-self: normal;
+    margin-left: 20px;
+    justify-content: space-around;
+  }
+  .mycart .itemdetail .wrap .quantity{
+    align-self: end;
+  }
+
+  
+  .amount{
+    width: 100%;
+    justify-content: flex-end;
+    border-top: 1px solid #EAF0ED;
+    border-bottom: 1px solid #EAF0ED;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  .amount a {
+    display: none;
+  }
+}
+
+.mycart,
+.mycartdetail{
+  margin: 20px;
+}
+
+/* mycart */
+.mycart{
+  flex: 4;
+}
+.mycart h2{
+  text-align: center;
+  font-size: 24px;
+  background:#EAF0ED;
+  padding: 20px;
+  color: #3F5D45;
+  margin-bottom: 20px
+}
+.mycart li{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  border-bottom: 1px solid #EAF0ED;
+  padding-bottom: 20px;
+}
+.mycart .itemdetail{
+  flex:3;
+  display:flex;
+  align-items: center;
+}
+.mycart .itemdetail .photo{
+  background-image: url("https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60");
+  flex: 1;  
+  display: block;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width:768px){
+  .mycart .itemdetail .photo{
+    width: 200px;
+    flex: 2;
+  }
+}
+.mycart .itemdetail .wrap{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+}
+.mycart .itemdetail .text{
+  color:#3F5D45;
+  line-height: 1.5;
+  padding:0 10px;
+}
+.mycart .itemdetail .text h3{
+  font-size: 20px;
+}
+.mycart .itemdetail .quantity{
+  display: flex;
+  align-self: center;
+}
+.mycart .itemdetail .quantity button{
+  cursor: pointer;
+  border: 1px solid #EAF0ED;
+}
+.mycart .itemdetail .quantity button:focus{
+  outline: none;
+}
+.mycart .itemdetail .quantity button:hover{
+background:rgb(170, 170, 170) ;
+}
+.mycart .itemdetail .quantity button,
+.mycart .itemdetail .quantity span
+{
+  padding: 15px;
+}
+.mycart .itemdetail .quantity span{
+  border-top: 1px solid #EAF0ED;
+  border-bottom: 1px solid #EAF0ED;
+}
+
+.mycart .amount{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1.5;
+}
+@media screen and (max-width:768px){
+  .mycart .amount{
+    width: 100%;
+    justify-content: flex-end;
+    border-top: 1px solid #EAF0ED;
+    border-bottom: 1px solid #EAF0ED;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  .mycart .amount a {
+    display: none;
+  }
+}
+.mycart .amount span{
+  font-size: 20px;
+  font-weight: bold;
+  color: #3F5D45;
+}
+.mycart .amount a{
+text-decoration: none;
+color: #3F5D45;
+}
+
+
+
+/* mycartdetail */
+.mycartdetail{
+  width: 100%;
+  flex: 2;
+  text-align: center;
+}
+@media screen and (max-width:768px) {
+  .mycartdetail{
+    width:50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width:568px){
+  .mycartdetail{
+    width: 100%;
+    margin-bottom: -20px;
+  }
+  .mycartdetail h2 {
+    background: #EAF0ED !important;
+    color: #3F5D45 !important;
+    margin: 0 20px;
+    font-weight: bold;
+  }
+  .mycartdetail ul{
+    background: none !important;
+  }
+  .mycartdetail li{
+  background: none !important;
+  color: #3F5D45 !important;
+  }
+  .mycartdetail a{
+  }
+}
+
+.mycartdetail h2{
+  text-align: center;
+  font-size: 24px;
+  padding: 20px 0;
+  background: #3F5D45;
+  color: #EAF0ED;
+}
+.mycartdetail ul{
+  background: #3F5D45;
+}
+.mycartdetail li{
+  display: flex;
+  justify-content:space-between;
+  line-height: 2;
+  background: #3F5D45;
+  margin:0 20px ;
+  color: #EAF0ED;
+}
+.mycartdetail li:first-child{
+border-top: 1px solid #fff;
+}
+
+.mycartdetail li:last-child{
+  font-size: 20px;
+  font-weight: bold;
+  padding:10px 0;
+}
+.mycartdetail a{
+  display: block;
+  text-decoration: none;
+  background: #FFE180;
+  color: #3F5D45;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+
